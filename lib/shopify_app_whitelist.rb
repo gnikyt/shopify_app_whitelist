@@ -1,13 +1,8 @@
 require 'shopify_app'
+require 'shopify_app/configuration'
 require 'shopify_app_whitelist/version'
-require 'shopify_app_whitelist/protection'
+require 'shopify_app_whitelist/protection_concern'
+require 'shopify_app_whitelist/shopify_app_configuration_ext'
+require 'shopify_app_whitelist/railite'
 
-module ShopifyAppWhitelist
-  class Railtie < Rails::Railtie
-    config.after_initialize do
-      Rails::app_class::ApplicationController.class_eval do
-        include ShopifyAppWhitelist::Protection
-      end
-    end
-  end
-end
+module ShopifyAppWhitelist; end

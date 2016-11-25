@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.2.6
+env:
+  - NO_COVERAGE=true
+script:
+  - bundle exec rake test
