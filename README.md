@@ -1,5 +1,7 @@
 # shopify_app_whitelist
 
+[![Build Status](https://secure.travis-ci.org/tyler-king/shopify_app_whitelist.svg?branch=master)](http://travis-ci.org/tyler-king/shopify_app_whitelist) [![Docs](https://inch-ci.org/github/tyler-king/shopify_app_whitelist.svg?branch=master)](https://inch-ci.org/github/tyler-king/shopify_app_whitelist)
+
 This Gem extends [shopify_app](https://github.com/Shopify/shopify_app) to add a whitelist option so only defined shops can access your app for installation.
 
 # Installation
