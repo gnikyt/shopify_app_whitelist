@@ -6,7 +6,7 @@ Gemfile.lock
 .DS_Store
 test/tmp/*
 test/dummy/log/*
-test/db/
+test/dummy/db/
 coverage/
 doc/
 .yardoc/

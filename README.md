@@ -28,3 +28,9 @@ end
 # Testing
 
 This Gem is tested. See `test/` or run `bundle rake test` after installing development dependencies.
+
+# How It Works
+
+This Gem adds two configuration options to `ShopifyApp::Configuration` automatically. Using a Railite, it also automatically injects a controller concern into `ApplicationController`.
+
+The concern will check if the current controller is `shopify_app/sessions_controller` and that the action is one of `new`, `create`, or `callback`. If it is, it will check the shop's Shopify domain against the whitelist to see if the shop is allowed to access these methods.
