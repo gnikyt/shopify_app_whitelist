@@ -8,3 +8,4 @@ test/tmp/*
 test/dummy/log/*
 test/db/
 coverage/
+doc/

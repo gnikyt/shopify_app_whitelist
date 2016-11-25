@@ -1,3 +1,4 @@
 module ShopifyAppWhitelist
-  VERSION = '0.0.1'.freeze
+  # Gem version
+  VERSION = '1.0.0'.freeze
 end
