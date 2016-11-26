@@ -10,3 +10,4 @@ test/dummy/db/
 coverage/
 doc/
 .yardoc/
+*.gem
