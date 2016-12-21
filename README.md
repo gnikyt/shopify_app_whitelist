@@ -4,7 +4,13 @@
 
 This Gem extends [shopify_app](https://github.com/Shopify/shopify_app) to add a whitelist option so only defined shops can access your app for installation.
 
+# Compatibility
+
+Rails 4 and Rails 5 are supported. Appraisal Gem is used to test against both versions.
+
 # Installation
+
+*Assuming shopify_app is already installed*
 
 1. Add `gem 'shopify_app_whitelist'` to your Gemfile
 2. Run `bundle install`
