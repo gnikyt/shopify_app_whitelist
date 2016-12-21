@@ -8,28 +8,44 @@ module ShopifyAppWhitelist
     end
 
     test 'not allowed shop should redirect to configured location' do
-      post :create, { shop: 'not-allowed.myshopify.com' }
+      if Rails::VERSION::MAJOR >= 5
+        post :create, params: { shop: 'not-allowed.myshopify.com' }
+      else
+        post :create, { shop: 'not-allowed.myshopify.com' }
+      end
 
       assert_response :redirect
       assert response.location.include?(ShopifyApp.configuration.whitelist_redirect)
     end
 
     test 'allowed shop should be granted access' do
-      post :create, { shop: 'allowed.myshopify.com' }
+      if Rails::VERSION::MAJOR >= 5
+        post :create, params: { shop: 'allowed.myshopify.com' }
+      else
+        post :create, { shop: 'allowed.myshopify.com' }
+      end
 
       assert_response :success
       assert response.body.include?('auth/')
     end
 
     test 'everyone should be granted login page' do
-      get :new, { shop: nil }
+      if Rails::VERSION::MAJOR >= 5
+        get :new, params: { shop: nil }
+      else
+        get :new, { shop: nil }
+      end
 
       assert_response :success
     end
 
     test 'protection works for each action' do
       [[:post, :create], [:get, :new], [:get, :callback]].each do |method, action|
-        send method, action, { shop: 'not-allowed.myshopify.com' }
+        if Rails::VERSION::MAJOR >= 5
+          send(method, action, params: { shop: 'not-allowed.myshopify.com' })
+        else
+          send(method, action, { shop: 'not-allowed.myshopify.com' })
+        end
 
         assert_response :redirect
         assert response.location.include?(ShopifyApp.configuration.whitelist_redirect)

@@ -3,5 +3,8 @@ rvm:
   - 2.2.6
 env:
   - NO_COVERAGE=true
+gemfile:
+  - gemfiles/rails_5.gemfile
+  - gemfiles/rails_4.gemfile
 script:
   - bundle exec rake test

@@ -11,3 +11,4 @@ coverage/
 doc/
 .yardoc/
 *.gem
+gemfiles/*.gemfile.lock
