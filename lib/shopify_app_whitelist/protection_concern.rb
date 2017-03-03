@@ -22,7 +22,7 @@ module ShopifyAppWhitelist
       # controller is the sessions controller and action is in the list
       if whitelist.present? && shop.present? && controller_match && action_match
         # Shop is not allowed, redirect to defined location
-        redirect_to(whitelist_redirect) unless whitelist.include?(params[:shop])
+        redirect_to(whitelist_redirect) unless whitelist.include?(shop)
       end
     end
   end

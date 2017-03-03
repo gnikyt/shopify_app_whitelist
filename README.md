@@ -4,18 +4,18 @@
 
 This Gem extends [shopify_app](https://github.com/Shopify/shopify_app) to add a whitelist option so only defined shops can access your app for installation.
 
-# Compatibility
+## Compatibility
 
 Rails 4 and Rails 5 are supported. Appraisal Gem is used to test against both versions.
 
-# Installation
+## Installation
 
 *Assuming shopify_app is already installed*
 
 1. Add `gem 'shopify_app_whitelist'` to your Gemfile
 2. Run `bundle install`
 
-# Configuration
+## Configuration
 
 1. Open your existing `config/initializers/shopify_app.rb` file
 2. Add `whitelist` and `whitelist_redirect` options
@@ -31,11 +31,11 @@ ShopifyApp.configure do |config|
 end
 ```
 
-# Testing
+## Testing
 
 This Gem is tested. See `test/` or run `bundle rake test` after installing development dependencies.
 
-# How It Works
+## How It Works
 
 This Gem adds two configuration options to `ShopifyApp::Configuration` automatically. Using a Railite, it also automatically injects a controller concern into `ApplicationController`.
 
