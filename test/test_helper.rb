@@ -3,10 +3,14 @@ ENV['RAILS_ENV'] = 'test'
 
 # Start SimpleCov
 require 'simplecov'
-unless ENV['NO_COVERAGE']
-  SimpleCov.start('rails') do
-    add_filter 'lib/shopify_app_whitelist/version.rb'
-  end
+SimpleCov.start('rails') do
+  add_filter 'lib/shopify_app_whitelist/version.rb'
+end
+
+# Start Codecov
+if ENV['CI'] == 'true'
+  require 'codecov'
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end
 
 require File.expand_path('../../test/dummy/config/environment.rb',  __FILE__)

@@ -1,6 +1,6 @@
 # shopify_app_whitelist
 
-[![Build Status](https://secure.travis-ci.org/tyler-king/shopify_app_whitelist.svg?branch=master)](http://travis-ci.org/tyler-king/shopify_app_whitelist) [![Docs](https://inch-ci.org/github/tyler-king/shopify_app_whitelist.svg?branch=master)](https://inch-ci.org/github/tyler-king/shopify_app_whitelist)
+[![Build Status](https://secure.travis-ci.org/tyler-king/shopify_app_whitelist.svg?branch=master)](http://travis-ci.org/tyler-king/shopify_app_whitelist) [![codecov](https://codecov.io/gh/tyler-king/shopify_app_whitelist/branch/master/graph/badge.svg)](https://codecov.io/gh/tyler-king/shopify_app_whitelist) [![Docs](https://inch-ci.org/github/tyler-king/shopify_app_whitelist.svg?branch=master)](https://inch-ci.org/github/tyler-king/shopify_app_whitelist) [![Gem Version](https://badge.fury.io/rb/shopify_app_whitelist.svg)](https://badge.fury.io/rb/shopify_app_whitelist)
 
 This Gem extends [shopify_app](https://github.com/Shopify/shopify_app) to add a whitelist option so only defined shops can access your app for installation.
 
@@ -25,7 +25,7 @@ Example:
 ```ruby
 ShopifyApp.configure do |config|
   # ...
-  config.whitelist          = ['allowed.myshopify.com', 'another-allowed-shop.myshopify.com']
+  config.whitelist          = %w(allowed.myshopify.com another-allowed-shop.myshopify.com)
   config.whitelist_redirect = '/404.html'
   # ...
 end

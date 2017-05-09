@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'appraisal'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'simplecov', '~> 0.12'
+  s.add_development_dependency 'codecov', '~> 0.1.4'
   s.add_development_dependency 'yard', '~> 0.8'
   s.add_development_dependency 'inch', '~> 0.7'
   s.add_development_dependency 'rubocop', '~> 0.45'
