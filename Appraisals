@@ -3,6 +3,6 @@ appraise 'rails-4' do
 end
 
 appraise 'rails-5' do
-  gem 'rails', '5.0.0'
+  gem 'rails', '5.1.0'
   gem 'activeresource', github: 'rails/activeresource' # required for shopify_app Rails 5 compatability
 end
