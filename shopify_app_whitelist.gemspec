@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = ShopifyAppWhitelist::VERSION
   s.authors     = ['Tyler King']
   s.email       = ['tyler.n.king@gmail.com']
-  s.homepage    = 'https://github.com/tyler-king/shopify_app_whitelist'
+  s.homepage    = 'https://github.com/ohmybrew/shopify_app_whitelist'
   s.summary     = 'Adds whitelisting ability to shopify_app'
   s.description = 'Adds a feature to whitelist certain shops to access your shopify_app installation'
   s.license     = 'MIT'
