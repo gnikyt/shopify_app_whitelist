@@ -1,3 +1,10 @@
+# Version 2.0.0
+
+*Breaking changes as rails and shopify_app are higher version*
+
++ Updated to test against `shopify_app` v8.1
++ Moved to support `rails` >= 5 only
+
 # Verion 1.1.1
 
 + URL references updated

@@ -6,8 +6,8 @@ This Gem extends [shopify_app](https://github.com/Shopify/shopify_app) to add a 
 
 ## Compatibility
 
-Rails 4 and Rails 5 are supported. Appraisal Gem is used to test against both versions.
-
+**v2.0 up** - Rails 5 and Shopify App 8 are supported.
+**v1.0 up** - Rails 4 and Rails 5, Shopify App <7.1 are supported. Appraisal Gem is used to test against both versions of Rails.
 ## Installation
 
 *Assuming shopify_app is already installed*
@@ -37,6 +37,6 @@ This Gem is tested. See `test/` or run `bundle rake test` after installing devel
 
 ## How It Works
 
-This Gem adds two configuration options to `ShopifyApp::Configuration` automatically. Using a Railite, it also automatically injects a controller concern into `ApplicationController`.
+This Gem adds two configuration options to `ShopifyApp::Configuration` automatically. Using a Railite, it also automatically injects a controller concern into `ActionController::Base`.
 
 The concern will check if the current controller is `shopify_app/sessions_controller` and that the action is one of `new`, `create`, or `callback`. If it is, it will check the shop's Shopify domain against the whitelist to see if the shop is allowed to access these methods.
